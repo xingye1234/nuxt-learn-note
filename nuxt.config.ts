@@ -7,7 +7,10 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/ui',
     '@nuxt/icon',
+    '@element-plus/nuxt'
   ],
+  // elementPlus:{
+  // },
   // app: {
   //   keepalive: true,
   // },

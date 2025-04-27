@@ -4,9 +4,12 @@
     <p>This is the home page of my website.</p>
     <button @click="$router.push('/about')">Go to About Page</button>
     <br />
-    <button @click="count++">{{ count }}</button>
+    <!-- <button @click="count++">{{ count }}</button> -->
+
+    <el-button type="primary" @click="count++">{{ count }}</el-button>
+
     <div>
-      response: {{ data.msg }}
+      response: {{ data!.msg }}
     </div>
   </div>
 </template>

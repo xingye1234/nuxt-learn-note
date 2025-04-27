@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/image',
     '@nuxt/ui',
-    '@nuxt/icon'
+    '@nuxt/icon',
   ],
   // app: {
   //   keepalive: true,
@@ -23,7 +23,7 @@ export default defineNuxtConfig({
   //   '/': { prerender: true },
   //   '/about': { prerender: true },
   // }
-  experimental:{
-    componentIslands:true
+  experimental: {
+    componentIslands: true
   }
 })

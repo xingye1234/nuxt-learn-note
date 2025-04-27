@@ -5,7 +5,6 @@
     <button @click="$router.push('/about')">Go to About Page</button>
     <br />
     <button @click="count++">{{ count }}</button>
-
     <div>
       response: {{ data.msg }}
     </div>
@@ -15,16 +14,28 @@
 
 definePageMeta({
   keepalive: true,
-  key:(route) => route.fullPath,
+  key: (route) => route.fullPath,
   pageTransition: {
     name: 'fade',
-    mode: 'out-in', 
+    mode: 'out-in',
   },
-  title: 'Home Page',
 })
+
+
 
 const count = ref(0)
 const { data } = await useFetch('/api/hello');
+
+const res = await $fetch('/api/profile/1');
+
+console.log('------->fetch',res);
+
+// const { data: asyncData, status, error, refresh, clear } = await useAsyncData(
+//   'api-hello',
+//   () => $fetch('/api/hello')
+// )
+
+// console.log('------->', asyncData, status, error);
 
 // console.log(data)
 
@@ -41,6 +52,7 @@ const { data } = await useFetch('/api/hello');
 .fade-leave-active {
   transition: opacity 0.5s ease;
 }
+
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;

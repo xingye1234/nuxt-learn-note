@@ -3,15 +3,19 @@ export default defineNuxtPlugin({
     enforce: 'pre', // or 'post'
     async setup (nuxtApp) {
       // this is the equivalent of a normal functional plugin
-      console.log('------> plugins setup', nuxtApp)
+      // console.log('------> plugins setup', nuxtApp)
+
     },
     hooks: {
       // You can directly register Nuxt app runtime hooks here
+
+      // app:created 参考 https://nuxt.com/docs/api/advanced/hooks 生命周期hook
+
       'app:created'() {
         const nuxtApp = useNuxtApp()
         // do something in the hook
 
-        console.log('--------> plugins runtime hook', nuxtApp)
+        // console.log('--------> plugins runtime hook', nuxtApp)
       }
     },
     env: {

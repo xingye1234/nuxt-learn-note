@@ -5,8 +5,6 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
     '@nuxt/image',
-    '@nuxt/ui',
-    '@nuxt/icon',
     '@element-plus/nuxt'
   ],
   // elementPlus:{
@@ -26,7 +24,7 @@ export default defineNuxtConfig({
   //   '/': { prerender: true },
   //   '/about': { prerender: true },
   // }
-  experimental: {
-    componentIslands: true
-  }
+  // experimental: {
+  //   componentIslands: true
+  // }
 })

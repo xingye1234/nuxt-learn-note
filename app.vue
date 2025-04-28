@@ -8,7 +8,7 @@
 
 const nuxtApp = useNuxtApp();
 
-console.log('------->nuxtApp',nuxtApp);
+// console.log('------->nuxtApp',nuxtApp);
 
 // console.log('------->config',config);
 

@@ -4,7 +4,12 @@ export default defineNuxtPlugin({
     async setup (nuxtApp) {
       // this is the equivalent of a normal functional plugin
       // console.log('------> plugins setup', nuxtApp)
-
+      return {
+        provide: {
+          // 可以通过 useNuxtApp().$myPluginKey 来访问到这个值
+          myPluginKey: 'Hello from plugin!'
+        }
+      }
     },
     hooks: {
       // You can directly register Nuxt app runtime hooks here

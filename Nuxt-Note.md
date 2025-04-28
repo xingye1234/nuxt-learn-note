@@ -10,6 +10,7 @@ console.log(nuxtApp.$hello('name'))
 
 // 在plugin中使用 hook
 export default defineNuxtPlugin((nuxtApp) => {
+  //生命周期
   nuxtApp.hook('page:start', () => {
     /* your code goes here */
   })
@@ -19,10 +20,14 @@ export default defineNuxtPlugin((nuxtApp) => {
     //   console.log(..._args)
     // }
   })
+
+  retrun{
+    provide:{
+      hello:(name) => `Hello ${name}!`
+    }
+  }
 })
 ```
-
-# Directory structure
 
 ## layouts 设置基础布局
 

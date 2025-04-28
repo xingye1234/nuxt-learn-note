@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "nuxt build && pm2 start ecosystem.config.cjs",
+    "start": "pm2 start ecosystem.config.cjs",
     "stop": "pm2 stop ecosystem.config.cjs",
     "build": "nuxt build",
     "dev": "nuxt dev",

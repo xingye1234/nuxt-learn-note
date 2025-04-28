@@ -12,9 +12,15 @@ console.log('------->nuxtApp',nuxtApp);
 
 // console.log('------->config',config);
 
-useSeoMeta({
-   title: 'Nuxt Demo',
-   description: 'This is the description of the nuxt demo',
-   ogTitle: 'Nuxt Demo',
-})
+const runTimeConfig = useRuntimeConfig();
+const appConfig = useAppConfig();
+
+console.log('------->appConfig',appConfig);
+console.log('------->runTimeConfig',runTimeConfig);
+
+// useSeoMeta({
+//    title: 'Nuxt Demo',
+//    description: 'This is the description of the nuxt demo',
+//    ogTitle: 'Nuxt Demo',
+// })
 </script>

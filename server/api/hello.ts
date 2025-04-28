@@ -1,5 +1,5 @@
 export default defineEventHandler((event) => {
-    console.log('---------------->event',event.context.auth)
+    // console.log('---------------->event',event.context.auth)
 
     // const token = getCookie(event,'token')
 

@@ -1,4 +1,4 @@
 export default defineEventHandler((event) => {
-    console.log('---------->logs:' + getRequestURL(event))
+    // console.log('---------->logs:' + getRequestURL(event))
   })
   

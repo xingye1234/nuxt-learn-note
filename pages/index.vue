@@ -29,9 +29,9 @@ definePageMeta({
 const count = ref(0)
 const { data } = await useFetch('/api/hello');
 
-const res = await $fetch('/api/profile/1');
+// const res = await $fetch('/api/profile/1');
 
-console.log('------->fetch',res);
+// console.log('------->fetch',res);
 
 // const { data: asyncData, status, error, refresh, clear } = await useAsyncData(
 //   'api-hello',

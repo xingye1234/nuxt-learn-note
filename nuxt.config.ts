@@ -15,11 +15,11 @@ export default defineNuxtConfig({
         { name: 'description', content: 'Everything about Nuxt 3' }
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
       ]
     },
     pageTransition: {
-      name: 'fade',
+      name: 'page',
       mode: 'out-in',
     },
   },

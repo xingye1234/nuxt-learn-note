@@ -2,7 +2,7 @@ export default defineEventHandler((event) => {
 
     const auth = getRouterParams(event)
 
-    console.log('---------------->auth', auth)
+    // console.log('---------------->auth', auth)
 
     return {
         msg: 'api/foo',

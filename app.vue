@@ -15,8 +15,8 @@ const nuxtApp = useNuxtApp();
 const runTimeConfig = useRuntimeConfig();
 const appConfig = useAppConfig();
 
-console.log('------->appConfig',appConfig);
-console.log('------->runTimeConfig',runTimeConfig);
+// console.log('------->appConfig',appConfig);
+// console.log('------->runTimeConfig',runTimeConfig);
 
 // useSeoMeta({
 //    title: 'Nuxt Demo',

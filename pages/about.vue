@@ -8,7 +8,6 @@
 definePageMeta({
     keepalive: true,
     key:(route) => route.fullPath,
-    
 })
 
 useSeoMeta({

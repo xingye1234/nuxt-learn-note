@@ -18,13 +18,14 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
       ]
     },
-    pageTransition: {
-      name: 'page',
-      mode: 'out-in',
-    },
+    //全局设置页面过渡动画 目前有bug，会导致热更新报错
+    // pageTransition: {
+    //   name: 'page',
+    //   mode: 'out-in',
+    // },
   },
   routeRules: {
-    '/': { prerender: true },
+    // '/': { prerender: true },
     // // Cached for 1 hour
     // '/api/*': { cache: { maxAge: 60 * 60 } },
     // // Redirection to avoid 404
@@ -42,7 +43,7 @@ export default defineNuxtConfig({
       origin: '*',
       methods: ['GET', 'POST', 'PUT', 'DELETE']
     },
-    loadingTemplate: () => '<div>Loading...</div>'
+    // loadingTemplate: () => '<div>Loading...</div>'
   },
   // ssr: false,
   // routeRules: {

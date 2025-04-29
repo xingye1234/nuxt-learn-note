@@ -1,15 +1,19 @@
 <template>
-  <div>
+  <div class="home-content">
     <h1>Welcome to My Website</h1>
     <p>This is the home page of my website.</p>
-    <button @click="$router.push('/about')">Go to About Page</button>
-    <br />
-    <!-- <button @click="count++">{{ count }}</button> -->
 
-    <el-button type="primary" @click="count++">{{ count }}</el-button>
+
+    <NuxtLink to="/about">Go to About Page</NuxtLink>
+
+    <br />
+
+    <div class="btn">
+      <el-button type="primary" @click="count++">{{ count }}</el-button>
+    </div>
 
     <div>
-      response: {{ data!.msg }}
+      <span class="res">response</span>: {{ data!.msg }}
     </div>
   </div>
 </template>
@@ -17,11 +21,7 @@
 
 definePageMeta({
   keepalive: true,
-  key: (route) => route.fullPath,
-  pageTransition: {
-    name: 'page',
-    mode: 'out-in',
-  },
+  key: (route) => route.fullPath
 })
 
 
@@ -49,14 +49,38 @@ const { data } = await useFetch('/api/hello');
 // console.log(res)
 </script>
 
-<style>
+<style scoped lang="less">
 .page-enter-active,
 .page-leave-active {
-  transition: all 0.4s;
+  transition: opacity 0.3s ease;
 }
 .page-enter-from,
 .page-leave-to {
   opacity: 0;
-  filter: blur(1rem);
+}
+
+.home-content{
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  h1{
+    text-align: center;
+  }
+  p{
+    font-weight: bold;
+    text-align: center;
+    font-style: italic;
+  }
+  a{
+    color:skyblue;
+    margin-bottom: 20px;
+  }
+  .btn{
+    margin: 25px 0;
+  }
+  .res{
+    color: red;
+    font-weight: bold;
+  }
 }
 </style>

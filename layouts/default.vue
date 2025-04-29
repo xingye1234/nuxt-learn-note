@@ -20,10 +20,10 @@ header {
 
 main {
     padding: 20px;
-    box-sizing: border-box;
+    /* box-sizing: border-box;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     height: calc(100vh - 104px)
 }
 

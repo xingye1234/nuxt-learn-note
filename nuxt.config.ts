@@ -24,15 +24,6 @@ export default defineNuxtConfig({
     //   mode: 'out-in',
     // },
   },
-  routeRules: {
-    // '/': { prerender: true },
-    // // Cached for 1 hour
-    // '/api/*': { cache: { maxAge: 60 * 60 } },
-    // // Redirection to avoid 404
-    // '/old-page': {
-    //   redirect: { to: '/new-page', statusCode: 302 }
-    // }
-  },
   // elementPlus:{
   // },
   // app: {
@@ -45,11 +36,23 @@ export default defineNuxtConfig({
     },
     // loadingTemplate: () => '<div>Loading...</div>'
   },
-  // ssr: false,
   // routeRules: {
+  //   // 静态生成 (SSG)
   //   '/': { prerender: true },
-  //   '/about': { prerender: true },
-  // }
+    
+  //   // 客户端渲染 (SPA)
+  //   '/about': { ssr: false },
+    
+  //   // 重定向
+  //   '/old-page': { redirect: '/new-page' },
+    
+  //   // 缓存控制
+  //   '/api/*': { cache: { maxAge: 60 * 60 } },
+    
+  //   // 自定义headers
+  //   '/secure': { headers: { 'x-secure': 'true' } }
+  // },
+  
   // experimental: {
   //   componentIslands: true
   // }
